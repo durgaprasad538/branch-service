@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    name: branch-service
+  name: branch-service
+spec:
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8083
+    - name: https
+      protocol: TCP
+      port: 443
+      targetPort: 8085
+
+
+
+  selector:
+    app: branch-service
+  type: LoadBalancer
+  
+  
+  
+  
+  

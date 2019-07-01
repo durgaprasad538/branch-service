@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: branch-service
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: branch-service
+    spec:
+      containers:
+        - name: branch-service
+          image: anil9848/branch-service:latest
+          ports:
+            - containerPort: 80
