@@ -1,6 +1,6 @@
 package com.bank.app.service;
 
-import java.util.Collection;
+import java.util.List;
 
 import com.bank.app.domain.Branch;
 import org.json.JSONException;
@@ -18,5 +18,5 @@ public interface BranchService {
 
     public abstract void deleteBranch(int id) throws InterruptedException;
 
-    public abstract Collection<Branch> getAllBranches();
+    public abstract List<Branch> getAllBranches();
 }

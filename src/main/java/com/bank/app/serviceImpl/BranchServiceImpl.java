@@ -1,6 +1,6 @@
 package com.bank.app.serviceImpl;
 
-import java.util.Collection;
+import java.util.List;
 import javax.transaction.Transactional;
 
 import com.bank.app.domain.Branch;
@@ -53,8 +53,8 @@ public class BranchServiceImpl implements BranchService {
     }
 
     @Transactional
-    public Collection<Branch> getAllBranches() {
-        return branchRepository.findAllActiveUsersNative();
+    public List<Branch> getAllBranches() {
+        return branchRepository.findAll();
     }
 
     @Transactional

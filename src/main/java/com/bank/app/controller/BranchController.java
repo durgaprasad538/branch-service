@@ -1,6 +1,6 @@
 package com.bank.app.controller;
 
-import java.util.Collection;
+import java.util.List;
 
 import com.bank.app.serviceImpl.BranchServiceImpl;
 import com.bank.app.domain.Branch;
@@ -50,8 +50,7 @@ public class BranchController {
     }
 
     @RequestMapping(value = "/getAllBranchs", method = RequestMethod.GET)
-    public Collection<Branch> getAllBranchs() {
-        System.out.println("branch--->" + branch.getBranchType());
+    public List<Branch> getAllBranchs() {
         return branchServiceImpl.getAllBranches();
     }
 
